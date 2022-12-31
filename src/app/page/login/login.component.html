@@ -64,11 +64,13 @@
           </tr>
         </thead>
         <tbody>
-            <!-- directiva ngfor -->
+            <!-- directiva ngfor en mi variable listado estara mis datos[] con cada keys-->
             <tr *ngFor="let listado of datos">
                 <td>{{listado.firstName}}</td>
                 <td>{{listado.lastName}}</td>
                 <td>{{listado.edadAge}}</td>
+
+                <!-- otra forma ng if -->
                 <!-- <td *ngIf="listado.edadAge<=17">Menor de Edad</td>
                 <td *ngIf="listado.edadAge>=18">Mayor de Edad</td> -->
 
@@ -76,7 +78,7 @@
                 <td *ngIf="listado.edadAge<=17;else menor">Menor de Edad</td>
             </tr> 
               
-              
+              <!-- para que muestre mi mensaje de caso contrario -->
             <ng-template #menor>
                 <td>Es mayor de edad.</td>
             </ng-template>

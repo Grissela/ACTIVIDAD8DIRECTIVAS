@@ -13,28 +13,29 @@ export class LoginComponent{
   condicion!: string
   datos:any[]= []
  
-  // mi funcion
-  enviar(nom: string, ape: string, edad: string) {
-    this.name = nom
-    this.ape = ape
+  // mi funcion y mis campos
+  enviar(nombres: string, apellido: string, edad: string) {
+    this.name = nombres
+    this.ape = apellido
     this.age = edad
     this.condicion;
 
-    // mi clase los tipos de variables
-    class  ListarPersona {
+    // mi clase los tipos de variables y su constructor para inicializar mis campos de mi clase
+    class  Lista {
       firstName: string
       lastName: string
       edadAge: string
-      constructor(nom: string, ape: string, age: string) {
+      constructor(nom: string, apel: string, edad: string) {
         this.firstName = nom
-        this.lastName = ape
-        this.edadAge = age
+        this.lastName = apel
+        this.edadAge = edad
       }
     }
-    var green= new ListarPersona(this.name, this.ape, this.age)
+    // mi variable informacion para despues mostrar en el this.datos
+    var informacion= new Lista(this.name, this.ape, this.age)
   // para que muestre en la pagina con el push
-    this.datos.push(green)
-    console.log(green)
+    this.datos.push(informacion)
+    
   }
 
 }
